@@ -1,7 +1,7 @@
 package pets_amok;
 
 
-public abstract class AnimalSuper {
+public abstract class VirtualPet {
     String name;
     boolean isLiving = true;
     int hunger;
@@ -12,7 +12,7 @@ public abstract class AnimalSuper {
     int happiness = (health*4-(boredom*2));
 
 
-    public AnimalSuper(String name, boolean isLiving, int hunger, int water, int boredom, int waste, int happiness, int health) {
+    public VirtualPet(String name, boolean isLiving, int hunger, int water, int boredom, int waste, int happiness, int health) {
         this.name = name;
         this.isLiving = isLiving;
         this.hunger = hunger;
