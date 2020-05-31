@@ -10,19 +10,15 @@ public class VirtualPetShelter extends VirtualPet{
 };
 
 public void tick() {
-        for arrary list of some sort ()){
-        VirtualPet=getPet
-        if( instanceof Organic){
+        for({
+        VirtualPet  = getPet
+        if(hungryPet instanceof Organic){
         //pet waste
         //hunger
         //water
-        }else if( instanceof Robitic){
-        //will need to get deterioate happiness
-        //will detiorate health
-
+        }else if (hungryPet instanceof Robitic){
+        //will need to get deterioate
         }
-        }
-
 
 
 

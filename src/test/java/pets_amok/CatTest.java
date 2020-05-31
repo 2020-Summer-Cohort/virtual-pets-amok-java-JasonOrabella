@@ -1,5 +1,8 @@
 package pets_amok;
 
+import org.junit.jupiter.api.Test;
+
+@Test
 public class CatTest {
-    Cat underTest =new Cat();
+    OrganicCat underTest =new OrganicCat();
 }

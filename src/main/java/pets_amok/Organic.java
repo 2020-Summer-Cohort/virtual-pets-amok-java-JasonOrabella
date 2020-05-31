@@ -1,6 +1,6 @@
 package pets_amok;
 
 public interface Organic {
-//waste
-
+    public void createWaste();
+    public void cleanCage();
 }

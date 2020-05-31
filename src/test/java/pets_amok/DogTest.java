@@ -1,7 +1,10 @@
 package pets_amok;
 
+import org.junit.jupiter.api.Test;
+
+@Test
 public class DogTest {
-    Dog underTest = new Dog();
+    OrganicDog underTest = new OrganicDog();
 
 
 }
