@@ -3,6 +3,7 @@ package pets_amok;
 
 public class VirtualPet {
     String name;
+    String description;
     int hunger;
     int boredom;
     int health;
@@ -11,8 +12,11 @@ public class VirtualPet {
 //    int happiness= (500-(boredom+hunger)+health);
 
 
-    public VirtualPet(String name, int hunger, int boredom, int health, int thirst) {
+
+
+    public VirtualPet(String name, String description, int hunger, int boredom, int health, int thirst) {
         this.name = name;
+        this.description= description;
         this.hunger = hunger;
         this.boredom = boredom;
         this.health=health;
@@ -47,5 +51,8 @@ public class VirtualPet {
 
     public int getThirst() {
         return thirst;
+    }
+    public String getDescription() {
+        return description;
     }
 }

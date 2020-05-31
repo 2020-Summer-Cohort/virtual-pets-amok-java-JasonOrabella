@@ -11,11 +11,11 @@ public class Application {
         while (run == 1) {
 
             System.out.println("Pet Status:");
-            System.out.println("Name | Boredom | Hunger | Happiness | Health | Thirst ");
+            System.out.println("Name | Boredom | Hunger | Thirst| Health | Happiness | ");
             for (int i = 0; i < vps.list.size(); i++) {
                 System.out.println(vps.list.get(i).getName() + "\t" + "\t" + vps.list.get(i).getBoredom() +
-                        "\t" + "\t" + vps.list.get(i).getHunger() + "\t" + "\t" + vps.list.get(i).getHappiness() +
-                        "\t" + "\t" + vps.list.get(i).getHealth());
+                        "\t" + "\t" + vps.list.get(i).getHunger() + "\t" + "\t" + vps.list.get(i).getThirst() +
+                        "\t" + "\t" + vps.list.get(i).getHealth() + "\t" + "\t" + vps.list.get(i).getHappiness());
 
 
             }
@@ -27,19 +27,87 @@ public class Application {
             System.out.println("5. Admit a New Pet");
             System.out.println("6. Maintain the robotic pets");
             System.out.println("7. Clean the pets cages");
-            System.out.println("8. Quit");
-            System.out.println("Please enter 1-8 for your choice");
+            System.out.println("8.Ignore your pets and watch tv");
+            System.out.println("9. Quit");
+            System.out.println("Please enter 1-9 for your choice");
 
             int getActionNumber = input.nextInt();
 
             if (getActionNumber == 1) {
-
+                vps.feedAll();
+                vps.tick();
                 System.out.println("You feed all your Pets");
-            if (getActionNumber == 6) {
-            vps.tick();
-            vps.
+            } else if (getActionNumber == 2) {
+                vps.tick();
+                vps.waterAll();
+                System.out.println("You water all your pets");
+            } else if (getActionNumber == 3) {
+                for (int i = 0; i < vps.list.size(); i++) {
+                    System.out.println(vps.list.get(i).getName() + "\t"
+                            + vps.list.get(i).getDescription());
+                }
+                System.out.println("Would you like to play with a specific pet or walk all dogs?");
+                System.out.println("1. To play with a specific pet.");
+                System.out.println("2. To walk all dogs. ");
+                if (getActionNumber == 1) {
+                    Scanner stringScanner = new Scanner(System.in);
+                    String getActionString = stringScanner.next();
+                    for (int i = 0; i < vps.list.size(); i++) {
+                        if (getActionString.equalsIgnoreCase(vps.list.get(i).name)) {
+                        vps.playWithPet(getActionString);
+                            System.out.println("You played with" + " " + (vps.list.get(i).name));
+                        }
+                    }
+                    if (getActionNumber == 2) {
+                        //walk all dog method
+                        System.out.println("You walked all the dogs");
+
+                    }
+                } else if (getActionNumber == 4) {
+                    if (vps.list.size() >= 1) {
+                        for (int i = 0; i < vps.list.size(); i++) {
+                            System.out.println(vps.list.get(i).getName() + "\t"
+                                    + vps.list.get(i).getDescription());
+                        }
+                        System.out.println("Pet you would like to Adopt ?");
+                        Scanner stringScanner = new Scanner(System.in);
+                        String getActionString = stringScanner.next();
+                        for (int i = 0; i < vps.list.size(); i++) {
+                            if (getActionString.equalsIgnoreCase(vps.list.get(i).name)) {
+//                                        l1 = vps.removePet(getActionString);
+                            }
+                        }
+                        //need a remove pet method on this line
+                        System.out.println("The Pets now in the shelter are");
+//                                for (int i = 0; i < l1.size(); i++) {
+//                                    System.out.println(l1.get(i).name);
+                    }
+                    vps.tick();
+                } else {
+                    System.out.println("No more pets available for adoption");
+                }
+            } else if (getActionNumber == 5) {
+                System.out.println("Whats the name of the pet you would like to drop off?");
+                Scanner stringScanner = new Scanner(System.in);
+                String getActionString = stringScanner.next();
+                System.out.println("Whats the description of the pet you would like to drop off?");
+                Scanner stringScanner2 = new Scanner(System.in);
+                String getActionString2 = stringScanner.next();
+                            VirtualPet userPetNew = new VirtualPet(getActionString, getActionString2, 25,25,25, 25);
+                            vps.addPet(userPetNew);
+                System.out.println("The Pets now in the shelter are");
+                for (int i = 0; i < vps.list.size(); i++) {
+                    System.out.println(vps.list.get(i).name);
+                }
+                vps.tick();
             }
+            else if (getActionNumber == 6) {
+                vps.tick();
+                //vps.oil
+                System.out.println("You oil all your pets");
             } else if (getActionNumber == 8) {
+                vps.tick();
+            } else if (getActionNumber == 9) {
                 run = 0;
             }
         }
