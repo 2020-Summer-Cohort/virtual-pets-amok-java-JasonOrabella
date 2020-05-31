@@ -25,6 +25,11 @@ public void cageCleanliness(){
         waste=+5;
 
     }
+
+    @Override
+    public void cleanCage() {
+        waste-=20;
+    }
 }
 // all of pets lose happiness if health drops to low
 // put in loop that if happiness is low lose 5 health

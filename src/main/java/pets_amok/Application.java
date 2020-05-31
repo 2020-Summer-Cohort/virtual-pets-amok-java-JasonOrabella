@@ -1,7 +1,11 @@
 package pets_amok;
 
+import java.util.Scanner;
+
 public class Application {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        VirtualPetShelter vps = new VirtualPetShelter();
         System.out.println("Welcome to the Virtual Pet Shelter, now inclusive of Robotic animals");
         int run = 1;
         while (run ==1){

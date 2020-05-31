@@ -14,4 +14,13 @@ public class OrganicCat extends VirtualPet implements Organic{
     public void createWaste() {
         waste=+5;
     }
+
+    @Override
+    public void cleanCage() {
+
+    }
+
+    public int getWaste() {
+        return waste;
+    }
 }
