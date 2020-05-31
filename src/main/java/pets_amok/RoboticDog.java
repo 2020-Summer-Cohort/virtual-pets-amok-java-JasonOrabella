@@ -1,9 +1,11 @@
 package pets_amok;
 
 public class RoboticDog extends VirtualPet implements Robotic{
-    public RoboticDog(String name, int hunger, int boredom, int happiness, int health, int thirst) {
-        super(name, hunger, boredom, happiness, health, thirst);
+    public RoboticDog(String name, int hunger, int boredom, int health, int thirst) {
+        super(name, hunger, boredom, health, thirst);
     }
+    String hunger;
+    String thirst;
 
     @Override
     public void robotTickHealth() {
@@ -17,12 +19,11 @@ public class RoboticDog extends VirtualPet implements Robotic{
     }
 
     @Override
-    public void robotOverrideFeed() {
-    hunger= Integer.parseInt(null);
+    public void robotOverrideFeed(){
+        hunger= "null";
     }
-
     @Override
     public void robotOverrideWater() {
-    thirst= Integer.parseInt(null);
+        thirst ="null";
     }
 }

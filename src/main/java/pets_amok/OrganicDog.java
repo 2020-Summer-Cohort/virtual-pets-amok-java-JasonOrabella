@@ -5,8 +5,8 @@ package pets_amok;
 // walk all dog method
 public class OrganicDog extends VirtualPet implements Organic{
    public int waste;
-    public OrganicDog(String name, int hunger, int boredom, int happiness, int health,int thirst) {
-        super(name, hunger, boredom, happiness, health,thirst);
+    public OrganicDog(String name, int hunger, int boredom, int health,int thirst) {
+        super(name, hunger, boredom, health,thirst);
 
     }
 

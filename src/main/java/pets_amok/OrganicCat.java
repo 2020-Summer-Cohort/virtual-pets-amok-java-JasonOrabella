@@ -3,7 +3,7 @@ package pets_amok;
 public class OrganicCat extends VirtualPet implements Organic{
     private int waste;
     public OrganicCat(String name, int hunger, int boredom, int happiness, int health, int thirst) {
-        super(name, hunger, boredom, happiness, health,thirst);
+        super(name, hunger, boredom, health,thirst);
     }
     public void cat(){
         boolean cat = true;
