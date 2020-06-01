@@ -8,7 +8,7 @@ public class RoboticCat extends VirtualPet implements Robotic {
     @Override
     public void robotTickHealth() {
         health -=3;
-        boredom-=3;
+        boredom+=3;
     }
 
     @Override

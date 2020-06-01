@@ -21,9 +21,9 @@ public class VirtualPetShelter {
         list = new ArrayList<VirtualPet>();
         p1 = new OrganicDog("Fido", "Organic Dog", 20, 20, 20, 20);
         list.add(p1);
-        p2 = new RoboticDog("Gearhead", "robotic dog", 20, 20, 20, 0);
+        p2 = new RoboticDog("Dave", "robotic dog", 20, 20, 20, 0);
         list.add(p2);
-        p3 = new OrganicDog("BeefBoy", "Organic", 20, 20, 20, 20);
+        p3 = new OrganicDog("Frank", "Organic", 20, 20, 20, 20);
         list.add(p3);
     }
 
@@ -94,4 +94,15 @@ public class VirtualPetShelter {
             }
         }
     }
+    public void oil() {
+        itr = list.iterator();
+        for (int i = 0; i < list.size(); i++) {
+            VirtualPet p = (VirtualPet) itr.next();
+            if (p instanceof Organic) {
+            }
+            if (p instanceof Robotic) {
+                ((Robotic) p).oilAll();
+            }
+            }
+        }
 }
