@@ -65,7 +65,7 @@ public class Application {
                     }
 
                 } else if (playInput == 2) {
-                    //walk all dog method
+                   vps.walkAllDogs();
                     System.out.println("You walked all the dogs");
                 }
             } else if (getActionNumber == 4) {

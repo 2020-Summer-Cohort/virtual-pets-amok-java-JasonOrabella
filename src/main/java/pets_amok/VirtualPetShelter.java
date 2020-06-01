@@ -13,6 +13,8 @@ public class VirtualPetShelter {
     OrganicDog p1;
     RoboticDog p2;
     OrganicDog p3;
+    OrganicCat p4;
+    RoboticCat p5;
     Iterator itr;
 
     VirtualPetShelter() {
@@ -21,10 +23,14 @@ public class VirtualPetShelter {
         list = new ArrayList<VirtualPet>();
         p1 = new OrganicDog("Fido", "Organic Dog", 20, 20, 20, 20);
         list.add(p1);
-        p2 = new RoboticDog("Dave", "robotic dog", 20, 20, 20, 0);
+        p2 = new RoboticDog("Dave", "robotic dog", 0, 20, 20, 0);
         list.add(p2);
         p3 = new OrganicDog("Frank", "Organic", 20, 20, 20, 20);
         list.add(p3);
+        p4 = new OrganicCat("Floof","Sad Organic kitty",20,40,20,20,20);
+        list.add(p4);
+        p5 = new RoboticCat("Gearo","Sassy Robotic cat",20,23,500,20);
+        list.add(p5);
     }
 
     public void tick() {
@@ -90,10 +96,11 @@ public class VirtualPetShelter {
     public void playWithPet(String getActionString) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).name.equalsIgnoreCase(getActionString)) {
-                list.get(i).boredom -= 10;
+                list.get(i).boredom -= 25;
             }
         }
     }
+
     public void oil() {
         itr = list.iterator();
         for (int i = 0; i < list.size(); i++) {
@@ -103,6 +110,39 @@ public class VirtualPetShelter {
             if (p instanceof Robotic) {
                 ((Robotic) p).oilAll();
             }
+        }
+    }
+
+    public void wasteMethod() {
+        itr = list.iterator();
+        for (int i = 0; i < list.size(); i++) {
+            VirtualPet p = (VirtualPet) itr.next();
+            if (p instanceof OrganicDog) {
+                System.out.println("The Organic dogs are:");
+                for (int d = 0; d < list.size(); d++)
+                    System.out.println(list.get(d).name);
+                System.out.println("Their waste level is:");
+
+            }
+            if (p instanceof Robotic) {
             }
         }
+    }
+
+    public void walkAllDogs() {
+        itr = list.iterator();
+        for (int i = 0; i < list.size(); i++) {
+            VirtualPet p = (VirtualPet) itr.next();
+            if (p instanceof OrganicDog) {
+                list.get(i).boredom-=15;
+            }
+            if (p instanceof OrganicDog) {
+                list.get(i).boredom-=15;
+            }
+                if (p instanceof RoboticCat) {
+
+                }
+        }
+    }
 }
+
