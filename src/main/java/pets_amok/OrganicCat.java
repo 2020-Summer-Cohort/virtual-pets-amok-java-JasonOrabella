@@ -17,9 +17,9 @@ public class OrganicCat extends VirtualPet implements Organic{
 
     @Override
     public void organicTick() {
-        hunger-=5;
-        boredom-=5;
-        thirst-=5;
+        hunger+=5;
+        boredom+=5;
+        thirst+=5;
     }
 
     @Override

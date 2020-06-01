@@ -3,7 +3,7 @@ package pets_amok;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Application {
+public class VirtualPetApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         VirtualPetShelter vps = new VirtualPetShelter();
@@ -65,7 +65,7 @@ public class Application {
                     }
 
                 } else if (playInput == 2) {
-                   vps.walkAllDogs();
+                    vps.walkAllDogs();
                     System.out.println("You walked all the dogs");
                 }
             } else if (getActionNumber == 4) {
@@ -110,8 +110,8 @@ public class Application {
                     System.out.println("You oil all your pets");
                 } else if (getActionNumber == 7) {
                     vps.tick();
-                    //clean the pets cages
-
+                    vps.wasteMethod();
+                    System.out.println("you clean your dogs cages");
                 } else if (getActionNumber == 8) {
                     System.out.println("You watch 2 episodes of Avatar the Last Airbender");
                     System.out.println("You notice similarities between America and the Fire Nation");

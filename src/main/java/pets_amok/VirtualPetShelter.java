@@ -21,15 +21,15 @@ public class VirtualPetShelter {
 //        ArrayList<VirtualPet> list;
 
         list = new ArrayList<VirtualPet>();
-        p1 = new OrganicDog("Fido", "Organic Dog", 20, 20, 20, 20);
+        p1 = new OrganicDog("Fido", "Organic Dog", 20, 20, 20, 20,20);
         list.add(p1);
         p2 = new RoboticDog("Dave", "robotic dog", 0, 20, 20, 0);
         list.add(p2);
-        p3 = new OrganicDog("Frank", "Organic", 20, 20, 20, 20);
+        p3 = new OrganicDog("Frank", "Organic", 20, 20, 20, 20,20);
         list.add(p3);
         p4 = new OrganicCat("Floof","Sad Organic kitty",20,40,20,20,20);
         list.add(p4);
-        p5 = new RoboticCat("Gearo","Sassy Robotic cat",20,23,500,20);
+        p5 = new RoboticCat("Gearo","Sassy Robotic cat",20,23,0,20);
         list.add(p5);
     }
 
@@ -122,7 +122,7 @@ public class VirtualPetShelter {
                 for (int d = 0; d < list.size(); d++)
                     System.out.println(list.get(d).name);
                 System.out.println("Their waste level is:");
-
+//             /   ();
             }
             if (p instanceof Robotic) {
             }
