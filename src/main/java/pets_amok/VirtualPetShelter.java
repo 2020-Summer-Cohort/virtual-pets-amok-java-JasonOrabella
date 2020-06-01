@@ -21,15 +21,15 @@ public class VirtualPetShelter {
 //        ArrayList<VirtualPet> list;
 
         list = new ArrayList<VirtualPet>();
-        p1 = new OrganicDog("Fido", "Organic Dog", 20, 20, 20, 20,20);
+        p1 = new OrganicDog("Fido", "Organic Dog", 20, 20, 20, 20, 20);
         list.add(p1);
         p2 = new RoboticDog("Dave", "robotic dog", 0, 20, 20, 0);
         list.add(p2);
-        p3 = new OrganicDog("Frank", "Organic", 20, 20, 20, 20,20);
+        p3 = new OrganicDog("Frank", "Organic", 20, 20, 20, 20, 20);
         list.add(p3);
-        p4 = new OrganicCat("Floof","Sad Organic kitty",20,40,20,20,20);
+        p4 = new OrganicCat("Floof", "Sad Organic kitty", 20, 40, 20, 20, 20);
         list.add(p4);
-        p5 = new RoboticCat("Gearo","Sassy Robotic cat",20,23,0,20);
+        p5 = new RoboticCat("Gearo", "Sassy Robotic cat", 0, 23, 20, 0);
         list.add(p5);
     }
 
@@ -133,15 +133,9 @@ public class VirtualPetShelter {
         itr = list.iterator();
         for (int i = 0; i < list.size(); i++) {
             VirtualPet p = (VirtualPet) itr.next();
-            if (p instanceof OrganicDog) {
-                list.get(i).boredom-=15;
+            if (p instanceof OrganicDog || p instanceof RoboticDog) {
+                list.get(i).boredom -= 15;
             }
-            if (p instanceof OrganicDog) {
-                list.get(i).boredom-=15;
-            }
-                if (p instanceof RoboticCat) {
-
-                }
         }
     }
 }

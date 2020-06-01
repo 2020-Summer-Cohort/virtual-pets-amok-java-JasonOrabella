@@ -54,7 +54,7 @@ public class VirtualPetApp {
                 Scanner playScanner = new Scanner(System.in);
                 int playInput = playScanner.nextInt();
                 if (playInput == 1) {
-                    System.out.println("What doggo do you wanna play with?");
+                    System.out.println("What pet do you wanna play with?");
                     Scanner stringScanner = new Scanner(System.in);
                     String getActionString = stringScanner.next();
                     for (int i = 0; i < vps.list.size(); i++) {
@@ -67,7 +67,9 @@ public class VirtualPetApp {
                 } else if (playInput == 2) {
                     vps.walkAllDogs();
                     System.out.println("You walked all the dogs");
+
                 }
+                vps.tick();
             } else if (getActionNumber == 4) {
                 vps.tick();
                 if (vps.list.size() >= 1) {
@@ -86,42 +88,43 @@ public class VirtualPetApp {
                     System.out.println("The Pets now in the shelter are");
                     for (int i = 0; i < l1.size(); i++) {
                         System.out.println(l1.get(i).name);
-//                    }if{
-//                        System.out.println("No more pets available for adoption");
-//                    }
                     }
-                } else if (getActionNumber == 5) {
-                    System.out.println("Whats the name of the pet you would like to drop off?");
-                    Scanner stringScanner = new Scanner(System.in);
-                    String getActionString = stringScanner.next();
-                    System.out.println("Whats the description of the pet you would like to drop off?");
-                    Scanner stringScanner2 = new Scanner(System.in);
-                    String getActionString2 = stringScanner.next();
-                    VirtualPet userPetNew = new VirtualPet(getActionString, getActionString2, 25, 25, 25, 25);
-                    vps.addPet(userPetNew);
-                    System.out.println("The Pets now in the shelter are");
-                    for (int i = 0; i < vps.list.size(); i++) {
-                        System.out.println(vps.list.get(i).name);
-                    }
-                    vps.tick();
-                } else if (getActionNumber == 6) {
-                    vps.tick();
-                    vps.oil();
-                    System.out.println("You oil all your pets");
-                } else if (getActionNumber == 7) {
-                    vps.tick();
-                    vps.wasteMethod();
-                    System.out.println("you clean your dogs cages");
-                } else if (getActionNumber == 8) {
-                    System.out.println("You watch 2 episodes of Avatar the Last Airbender");
-                    System.out.println("You notice similarities between America and the Fire Nation");
-                    vps.tick();
-                } else if (getActionNumber == 9) {
-                    System.out.println("buh bye");
-                    run = 0;
+                } else {
+                    System.out.println("No more pets available for adoption");
                 }
+
+            } else if (getActionNumber == 5) {
+                System.out.println("Whats the name of the pet you would like to drop off?");
+                Scanner stringScanner = new Scanner(System.in);
+                String getActionString = stringScanner.next();
+                System.out.println("Whats the description of the pet you would like to drop off?");
+                Scanner stringScanner2 = new Scanner(System.in);
+                String getActionString2 = stringScanner.next();
+                VirtualPet userPetNew = new VirtualPet(getActionString, getActionString2, 25, 25, 25, 25);
+                vps.addPet(userPetNew);
+                System.out.println("The Pets now in the shelter are");
+                for (int i = 0; i < vps.list.size(); i++) {
+                    System.out.println(vps.list.get(i).name);
+                }
+                vps.tick();
+            } else if (getActionNumber == 6) {
+                vps.tick();
+                vps.oil();
+                System.out.println("You oil all your pets");
+            } else if (getActionNumber == 7) {
+                vps.tick();
+                vps.wasteMethod();
+                System.out.println("you clean your dogs cages");
+            } else if (getActionNumber == 8) {
+                System.out.println("You watch 2 episodes of Avatar the Last Airbender");
+                System.out.println("You notice similarities between America and the Fire Nation");
+                vps.tick();
+            } else if (getActionNumber == 9) {
+                System.out.println("buh bye");
+                run = 0;
             }
         }
-
     }
+
 }
+
