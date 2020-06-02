@@ -94,14 +94,35 @@ public class VirtualPetApp {
                 }
 
             } else if (getActionNumber == 5) {
+                OrganicDog p1;
+                RoboticDog p2;
+                OrganicCat p3;
+                RoboticCat p4;
                 System.out.println("Whats the name of the pet you would like to drop off?");
                 Scanner stringScanner = new Scanner(System.in);
                 String getActionString = stringScanner.next();
                 System.out.println("Whats the description of the pet you would like to drop off?");
                 Scanner stringScanner2 = new Scanner(System.in);
-                String getActionString2 = stringScanner.next();
-                VirtualPet userPetNew = new VirtualPet(getActionString, getActionString2, 25, 25, 25, 25);
-                vps.addPet(userPetNew);
+                String getActionString2 = stringScanner2.nextLine();
+                System.out.println("Whats is they type of Pet you are dropping off?");
+                System.out.println("Please enter one of the following\n 1. Organic dog \n 2. Organic cat \n 3. Robotic dog \n 4. Robotic cat \n ");
+                String getActionString3 = stringScanner2.nextLine();
+                if (getActionString3.equalsIgnoreCase("Organic dog")){
+                    p1 = new OrganicDog(getActionString, getActionString2, 20, 20, 20, 20, 20);
+                    vps.addPet(p1);
+                }
+                else if(getActionString3.equalsIgnoreCase("Organic cat")){
+                    p3 = new OrganicCat(getActionString, getActionString2, 20, 20, 20, 20,20);
+                    vps.addPet(p3);
+                }
+                else if(getActionString3.equalsIgnoreCase("Robotic dog")){
+                    p2 = new RoboticDog(getActionString, getActionString2, 20, 20, 20, 20);
+                    vps.addPet(p2);
+                }
+                else if(getActionString3.equalsIgnoreCase("Robotic cat")){
+                    p4 = new RoboticCat(getActionString, getActionString2, 20, 20, 20, 20);
+                    vps.addPet(p4);
+                }
                 System.out.println("The Pets now in the shelter are");
                 for (int i = 0; i < vps.list.size(); i++) {
                     System.out.println(vps.list.get(i).name);

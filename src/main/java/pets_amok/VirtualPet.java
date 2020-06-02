@@ -9,6 +9,7 @@ public class VirtualPet {
     int health;
     int happiness;
     int thirst;
+    int waste;
 //    int happiness= (500-(boredom+hunger)+health);
 
 
@@ -25,7 +26,16 @@ public class VirtualPet {
 
     }
 
-    public VirtualPet() {
+    public VirtualPet(String name, String description, int hunger, int boredom, int health, int thirst, int waste) {
+        this.name = name;
+        this.description= description;
+        this.hunger = hunger;
+        this.boredom = boredom;
+        this.health=health;
+        this.thirst=thirst;
+        this.waste = waste;
+        this.happiness= (500-(boredom+hunger+thirst+waste)+health);
+
     }
 
 

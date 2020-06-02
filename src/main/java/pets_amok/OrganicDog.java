@@ -10,7 +10,7 @@ public class OrganicDog extends VirtualPet implements Organic {
     public int waste;
 
     public OrganicDog(String name, String description, int hunger, int boredom, int health, int thirst, int waste) {
-        super(name, description, hunger, boredom, health, thirst);
+        super(name, description, hunger, boredom, health, thirst, waste);
 
     }
 
@@ -42,7 +42,7 @@ public class OrganicDog extends VirtualPet implements Organic {
         waste -= 20;
     }
 
-
+    @Override
     public int getWaste() {
         return waste;
     }
