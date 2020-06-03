@@ -3,6 +3,19 @@ package pets_amok;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// -You did right by finishing the application instead of getting hung up on tests, but we want to see test coverage of this application
+//  in order to get you familiar with junit. Ask your instructors or classmates if you are having trouble getting started
+
+// -Instead of having one long main method in the VirtualPetApp, split portions out into their own methods within the class. For
+//  example you could move the printlns for the user options down into their own method below main. There are a lot of reason
+// for doing so that will become clear as we move forward. Ask us if you want clarification on this point
+
+// -Your class structure for your VirtualPet and subclasses could be cleaned up. Instead of your Robotic pets overriding feed and water,
+// you can set it up so those classes don't inherit feed and water at all. The goal with inheritance is to move all commonly shared
+// fields and methods up into a shared parent class. Since the Robotic pets don't have the hunger and thirst fields, they should not be
+// extend a class that has those fields. Consider Robotic and Organic parent classes that extend VirtualPet and are extended into
+// their respective Cat and Dog classes. You're also missing the maintenance/oil level in your robot. Ask if you are hazy on this concept
+
 public class VirtualPetApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
