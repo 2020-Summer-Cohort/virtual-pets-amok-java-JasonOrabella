@@ -36,7 +36,14 @@ public class VirtualPet {
         this.happiness= (500-(boredom+hunger+thirst+waste)+health);
 
     }
+    public VirtualPet(String name, String description, int boredom, int health) {
+        this.name = name;
+        this.description= description;
+        this.boredom = boredom;
+        this.health=health;
+        this.happiness= (450-(boredom)+health);
 
+    }
 
     public String getName() {
         return name;
