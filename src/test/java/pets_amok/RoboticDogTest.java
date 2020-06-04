@@ -6,6 +6,6 @@ public class RoboticDogTest {
 
     @Test
     public void RoboticDogTest(){
-        RoboticDog undertest = new RoboticDog("Sad","Gear",20,20,20,20);
+        RoboticDog undertest = new RoboticDog("Sad","Gear",20,20);
     }
 }
