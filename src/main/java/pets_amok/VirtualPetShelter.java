@@ -47,7 +47,19 @@ public class VirtualPetShelter {
             }
         }
     }
-
+public void gameLoopMenu(){
+    System.out.println("What would you like to do next?");
+    System.out.println("1.Feed the Pets");
+    System.out.println("2.Water the Pets");
+    System.out.println("3.Play with a Pet");
+    System.out.println("4. Adopt a New Pet");
+    System.out.println("5. Admit a New Pet");
+    System.out.println("6. Maintain the robotic pets");
+    System.out.println("7. Clean the pets cages");
+    System.out.println("8.Ignore your pets and watch tv");
+    System.out.println("9. Quit");
+    System.out.println("Please enter 1-9 for your choice");
+}
 
     public void waterAll() {
         itr = list.iterator();

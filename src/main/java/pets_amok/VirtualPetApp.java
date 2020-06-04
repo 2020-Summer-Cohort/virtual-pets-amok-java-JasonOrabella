@@ -34,17 +34,7 @@ public class VirtualPetApp {
 
 
             }
-            System.out.println("What would you like to do next?");
-            System.out.println("1.Feed the Pets");
-            System.out.println("2.Water the Pets");
-            System.out.println("3.Play with a Pet");
-            System.out.println("4. Adopt a New Pet");
-            System.out.println("5. Admit a New Pet");
-            System.out.println("6. Maintain the robotic pets");
-            System.out.println("7. Clean the pets cages");
-            System.out.println("8.Ignore your pets and watch tv");
-            System.out.println("9. Quit");
-            System.out.println("Please enter 1-9 for your choice");
+            vps.gameLoopMenu();
 
             int getActionNumber = input.nextInt();
 
@@ -120,19 +110,16 @@ public class VirtualPetApp {
                 System.out.println("Whats is they type of Pet you are dropping off?");
                 System.out.println("Please enter one of the following\n 1. Organic dog \n 2. Organic cat \n 3. Robotic dog \n 4. Robotic cat \n ");
                 String getActionString3 = stringScanner2.nextLine();
-                if (getActionString3.equalsIgnoreCase("Organic dog")){
+                if (getActionString3.equalsIgnoreCase("Organic dog")) {
                     p1 = new OrganicDog(getActionString, getActionString2, 20, 20, 20, 20, 20);
                     vps.addPet(p1);
-                }
-                else if(getActionString3.equalsIgnoreCase("Organic cat")){
-                    p3 = new OrganicCat(getActionString, getActionString2, 20, 20, 20, 20,20);
+                } else if (getActionString3.equalsIgnoreCase("Organic cat")) {
+                    p3 = new OrganicCat(getActionString, getActionString2, 20, 20, 20, 20, 20);
                     vps.addPet(p3);
-                }
-                else if(getActionString3.equalsIgnoreCase("Robotic dog")){
+                } else if (getActionString3.equalsIgnoreCase("Robotic dog")) {
                     p2 = new RoboticDog(getActionString, getActionString2, 20, 20);
                     vps.addPet(p2);
-                }
-                else if(getActionString3.equalsIgnoreCase("Robotic cat")){
+                } else if (getActionString3.equalsIgnoreCase("Robotic cat")) {
                     p4 = new RoboticCat(getActionString, getActionString2, 20, 20);
                     vps.addPet(p4);
                 }
@@ -158,6 +145,7 @@ public class VirtualPetApp {
                 run = 0;
             }
         }
+
     }
 
 }
