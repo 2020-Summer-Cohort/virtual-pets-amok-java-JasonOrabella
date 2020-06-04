@@ -19,12 +19,5 @@ public class RoboticDog extends VirtualPet implements Robotic{
         health +=20;
     }
 
-    @Override
-    public void robotOverrideFeed(){
-        hunger= "null";
-    }
-    @Override
-    public void robotOverrideWater() {
-        thirst ="null";
-    }
+
 }

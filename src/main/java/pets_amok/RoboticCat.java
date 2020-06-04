@@ -17,14 +17,4 @@ public class RoboticCat extends VirtualPet implements Robotic {
 
     }
 
-    @Override
-    public void robotOverrideFeed() {
-        hunger = Integer.parseInt(null);
-
-    }
-
-    @Override
-    public void robotOverrideWater() {
-            thirst= Integer.parseInt(null);
-    }
 }

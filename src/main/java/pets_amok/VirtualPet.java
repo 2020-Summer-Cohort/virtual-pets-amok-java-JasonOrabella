@@ -10,7 +10,6 @@ public class VirtualPet {
     int happiness;
     int thirst;
     int waste;
-//    int happiness= (500-(boredom+hunger)+health);
 
 
 
