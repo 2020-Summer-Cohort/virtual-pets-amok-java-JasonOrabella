@@ -129,11 +129,11 @@ public class VirtualPetApp {
                     vps.addPet(p3);
                 }
                 else if(getActionString3.equalsIgnoreCase("Robotic dog")){
-                    p2 = new RoboticDog(getActionString, getActionString2, 20, 20, 20, 20);
+                    p2 = new RoboticDog(getActionString, getActionString2, 20, 20);
                     vps.addPet(p2);
                 }
                 else if(getActionString3.equalsIgnoreCase("Robotic cat")){
-                    p4 = new RoboticCat(getActionString, getActionString2, 20, 20, 20, 20);
+                    p4 = new RoboticCat(getActionString, getActionString2, 20, 20);
                     vps.addPet(p4);
                 }
                 System.out.println("The Pets now in the shelter are");
